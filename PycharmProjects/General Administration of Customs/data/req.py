@@ -4,17 +4,19 @@ import requests
 import json
 from requests.adapters import HTTPAdapter
 import urllib3
+from fake_useragent import UserAgent
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 s = requests.Session()
+ua = UserAgent()
 
 
 def post_req(host: str, api: str, body: dict, ticket='') -> requests.Response:
     url = host + api
     header = {
-        "content-type": "application/json;charset=UTF-8",
-        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36"
+        "content-type": "application/json; charset=utf-8", # application/json; charset=utf-8
+        "user-agent": ua.random
     }
     if ticket:
         header["Authori-zation"] = ticket
