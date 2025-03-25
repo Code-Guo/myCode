@@ -16,7 +16,7 @@ app.config['MQTT_KEEPALIVE'] = 60
 # 如果服务器支持 TLS，则设置为 True
 app.config['MQTT_TLS_ENABLED'] = False
 # 主题
-topic = '/flask/mqtt'
+topic = '/flask/mqtt/sdlcgsb'
 # 实例化
 mqtt_client = Mqtt(app)
 
