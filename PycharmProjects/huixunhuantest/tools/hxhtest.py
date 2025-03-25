@@ -122,9 +122,9 @@ def QrCode_New(productId: str, tenantId: str, productTypeCode: str) -> None:
 
 if __name__ == '__main__':
     uid = "t25zkw1280"  # "w25bch"
-    productId = "633881724494"   # 633881747322   19一级  633881747164  # 633881747573   # 633881747431  洗碗机 03
+    productId = "633881725803"   # 633881747322   19一级  633881747164  # 633881747573   # 633881747431  洗碗机 03
     tenantId = ""
-    productTypeCode = "1"
+    productTypeCode = "28"
     QrCode(uid=uid)
     QrCode_New(productId=productId, tenantId=tenantId, productTypeCode=productTypeCode)
 
